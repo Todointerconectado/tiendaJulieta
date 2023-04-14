@@ -1,23 +1,13 @@
 const container_cards = document.querySelector('#container_cards');
-const botones = document.querySelectorAll('.botones');
-
+const ver_producto = document.querySelector('#ver_producto');
 const ul = document.createElement('ul');
 
 
 const API = `https://fakestoreapi.com/products`;
 
-
-try {
-    const result    = await fetch(API);
-    const respuesta = await result.json();
-    pintarCards(respuesta);
-}
-catch (err) {
-    console.log(err);
-}
-
-function pintarCards(json) {
-
+fetch(API)
+.then(  res  => res.json())
+.then(  json => {
     // Con ".slice(-6,20)" Traemos los ultimos 6 productos del api
     json.reverse().slice(0,20).forEach( producto => {
         // Desestructuración 
@@ -41,14 +31,18 @@ function pintarCards(json) {
 
                 <div class="card-footer justify-content-center gap-1 d-flex">
                     <small class="text-muted">
-                        <button type="text" name="${id}" class="botones btn btn-secondary">Ver Producto</button>
+                        <button type="text" onclick=ver_producto(${id}) value="${id}" class="btn btn-secondary">Ver Producto</button>
                         <button class="btn btn-primary">Enviar al carrito</button>
                     </small>
                 </div>
             </div>
         </div>
         `
-        
     });
-}
 
+    function ver_producto(id) {
+        console.log(id);
+    }
+
+})
+.catch( err  => console.error(err))
