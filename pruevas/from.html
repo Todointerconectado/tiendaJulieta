@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from</title>
+
+    <!-- Reset style Normalize -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+
+    <!-- Icons Fontawesome -->
+    <script defer src="https://kit.fontawesome.com/4600a4ff4e.js" crossorigin="anonymous"></script>
+
+    <!-- Style css -->
+	<link rel="stylesheet" href="../pruevas/from.css">
+</head>
+<body class="body">
+    <main class="main">
+        <form action="#" class="from" id="from">
+            <!-- Grupo: User -->
+            <section class="from__grupo" id="grupo__user">
+                <label for="user" class="from__label"><span>*</span> Usuario</label>
+                <div class="from__grupo-input">
+                    <input type="text" class="from__input" name="user" id="user" required placeholder="Ej: Francisco123">
+                    <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="from__input-error">
+                    El usuario tiene que ser de 4 a 16 digitos y solo puede contener números, letras y guiones bajo.
+                </p>
+            </section>
+
+            <!-- Grupo: Nombre -->
+            <section class="from__grupo" id="grupo__name">
+                <label for="name" class="from__label"><span>*</span> Nombre</label>
+                <div class="from__grupo-input">
+                    <input type="text" class="from__input" name="name" id="name" required placeholder="Ej: Francisco Carusso">
+                    <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="from__input-error">
+                    El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guiones bajo.
+                </p>
+            </section>
+        
+            <!-- Grupo: Password -->
+            <section class="from__grupo" id="grupo__password">
+                <label for="password" class="from__label"><span>*</span> Contraseña</label>
+                <div class="from__grupo-input">
+                    <input type="password" class="from__input" name="password" required id="password" placeholder="*******">
+                    <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="from__input-error">
+                    La contraseña tiene que ser de 4 a 12 digitos.
+                </p>
+            </section>
+
+            <!-- Grupo: Password 2 -->
+            <section class="from__grupo" id="grupo__password2">
+                <label for="password2" class="from__label"><span>*</span> Repetir Contraseña</label>
+                <div class="from__grupo-input">
+                    <input type="password" class="from__input" name="password2" required id="password2" placeholder="*******">
+                    <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="from__input-error">
+                    Ambas contraseñas deben ser iguales.
+                </p>
+            </section>
+
+            <!-- Grupo: email -->
+            <section class="from__grupo" id="grupo__email">
+                <label for="email" class="from__label"><span>*</span> Email</label>
+                <div class="from__grupo-input">
+                    <input type="email" class="from__input" name="email" id="email" required placeholder="Ej: user@email.com">
+                    <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="from__input-error">
+                    El email solo puede contener letra, números, puntos, guiones y guion bajo.
+                </p>
+            </section>
+
+            <!-- Grupo: teléfono -->
+            <section class="from__grupo" id="grupo__telefono">
+                <label for="telefono" class="from__label"><span>*</span> Telefono</label>
+                <div class="from__grupo-input">
+                    <input type="number" class="from__input" name="telefono" id="telefono" min="0" max="99999999999999" required placeholder="Ej:01112345678">
+                    <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="from__input-error">
+                    El teléfono solo puede contener números y el máximo son 14 digitos.
+                </p>
+            </section>
+
+            <!-- Grupo: Terminos y condiciones -->
+            <section class="from__grupo from__grupo-terminos" id="grupo__terminos">
+                <label class="from__label">
+                    <input type="checkbox" class="from__checkbox" name="terminos" id="terminos">
+                        Acepto los terminos y condiciones.
+                </label>
+            </section>
+
+            <!-- Mensaje de alerta -->
+            <article class="from__grupo from__mensaje" id="from__mensaje">
+                <p>
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <b>Error:</b> Por favor rellenar el formulario correctamente.
+                </p>
+            </article>
+
+            <!-- Grupo: Boton -->
+            <section class="from__grupo from__grupo-btn-enviar">
+                <button type="submit" class="from__btn">
+                    Enviar
+                </button>
+                <p class="from_mensaje-exito" id="from_mensaje-exito">
+                    Formulario enviado exitosamente!
+                </p>
+            </section>
+        </form>
+    </main>
+
+    <!-- Script js -->
+    <script src="../pruevas/from_js/from.js" type="module"></script>
+</body>
+</html>
