@@ -1,6 +1,6 @@
 # <h1 align="center">Trabajo Práctico Integrador</h1>
 
-> _Consultar el archivo [**integrador.md**](integrador.md)_
+> _Consultar el archivo [**integrador.md**](integrador.md) y el [**style_guia.md**](style_guia.md)_
 
 
 ## Acceso a la página
