@@ -1,13 +1,13 @@
+document.addEventListener('DOMContentLoaded', () => {
+    console.info(`%c The DOM document has been fully loaded 😎👍🏽.`,
+        `color: white; background: blue; border-radius: 10px; padding: 3px 10px;`);
+});
+
 const container_cards = document.querySelector('#container_cards');
-const verProducto = document.querySelectorAll('.verProducto');
 const ul = document.createElement('ul');
 
 
 const API = `https://fakestoreapi.com/products`;
-
-
-console.log(verProducto);
-
 
 fetch(API)
 .then(  res  => res.json())
@@ -61,7 +61,7 @@ fetch(API)
             </div>
         </div>
         `
-    }).addEventListener('click', console.log(verProducto));
+    });
 
 
 })
