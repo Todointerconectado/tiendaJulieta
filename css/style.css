@@ -1,3 +1,59 @@
-.style {
-    border: 2px solid red;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:wght@300;500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --color-white: rgb(255, 255, 255);
+    --color-blue: rgb(92, 103, 230);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* images de las cards */
+.img-hover-zoom {
+    height: 200px; 
+    overflow: hidden;
+}
+.img-style {
+    height: 200px;
+    object-fit: contain;
+    filter: blur(1.5px);
+    transform: scale(1.8);
+    transition: 
+        .3s ease object-fit,
+        .3s ease filter,
+        .5s ease transform;
+}
+.img-style:hover {
+    object-fit: contain;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+/* Title de las cards */
+.title-h {
+    height: 100%;
+    min-height: 50px;
+    font-size: 14px;
+}
+
+/* botones de las cards */
+.btn-azul {
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--color-blue);
+    color: var(--color-white);
+    transition: 300ms ease background, 300ms ease color;
+}
+
+.btn-azul:hover {
+    background: var(--color-white);
+    color: var(--color-blue);
 }
