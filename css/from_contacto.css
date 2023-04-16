@@ -1,0 +1,219 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:wght@300;500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* Variables */
+:root {
+    --color-input-white: #fff;
+    --color-shadow-punto4: rgba(163, 163, 163, .4);
+    --color-shadow-1: rgba(163, 163, 163, 1);
+    --color-btn-background: rgb(30, 30, 30);
+    --color-blue: rgb(92, 103, 230);
+
+    /* Estilos para validaciones */
+    --color-valido: #119200;
+    --color-error:  #ec8181;
+    --color-error-2:#e13f3f;
+}
+
+/* Reset style css navigator's */
+
+.container_from_contacto {
+    margin: 80px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.title_contacto {
+    text-align: center;
+    font-weight: bold;
+}
+
+.from {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.from__grupo {
+    display: grid;
+    position: relative;
+}
+
+.from__label {
+    padding: 10px;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+}
+span,
+.from__label-error {
+    color: var(--color-error-2);
+}
+/* Input */
+.from__grupo-input {
+    position: relative;
+}
+
+.from__input {
+    border: .3rem solid transparent;
+    padding: 0 40px 0 10px;
+    border-radius: 3px;
+    background: var(--color-input-white);
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    transition: 
+        300ms ease border,
+        300ms ease box-shadow,
+        300ms ease outline;
+}
+.from__input:focus {
+    border: 3px solid #0075FF;
+    box-shadow: 3px 0 30px var(--color-shadow-punto4);
+    outline: none;
+}
+.from__input::placeholder {
+    color: rgb(204, 204, 204);
+}
+
+/* Icon error del input */
+.from__validation-estado {
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    line-height: 45px;
+    opacity: 0;
+}
+
+/* Mensaje de error */
+.from__input-error {
+    /* margin-top: .6rem; */
+    border: 3px solid transparent;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    top: 75px;
+    display: none;
+}
+.from__input-error-activo {
+    display: block;
+}
+
+/* Grilla */
+.from__grupo-terminos {
+    grid-column: span 2;
+}
+
+/* Seccion email */
+.from__grupo-email {
+    grid-column: span 2;
+}
+
+/* Mensaje de error */
+.from__mensaje {
+    grid-column: span 2;
+    border-radius: 3px;
+    background: var(--color-error);
+    display: none;
+}
+.from__mensaje-correcto {
+    display: block;
+}
+.from__mensaje p {
+    padding: 0 15px;
+    height: 45px;
+    line-height: 45px;
+    outline: none;
+}
+
+/* Boton */
+.from__grupo-btn-enviar {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.from__btn {
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: var(--color-blue);
+    color: var(--color-input-white);
+    font-size: 18px;
+    font-weight: 500;
+    width: 38%;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 
+        300ms ease box-shadow,
+        300ms ease background,
+        300ms ease color;
+}
+.from__btn:hover {
+    box-shadow: 3px 0 3px var(--color-shadow-1);
+    background: var(--color-white);
+    color: var(--color-blue);
+}
+.from__btn:active {
+    background: var(--color-input-white);
+    color: var(--color-btn-background);
+}
+
+/* Mensaje Boton */
+.from_mensaje-exito {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--color-valido);
+    display: none;
+}
+
+.from_mensaje-exito-activo {
+    display: block;
+}
+
+/* ------ Estilos para validaciones ------ */
+.from__grupo-correcto .from__validation-estado {
+    color: var(--color-valido);
+    opacity: 1;
+}
+
+.from__grupo-incorrecto .from__validation-estado {
+    color: var(--color-error);
+    opacity: 1;
+}
+.from__grupo-incorrecto .from__input {
+    border: 3px solid var(--color-error);
+}
+
+/* ------ Media Queries ------ */
+
+@media screen and (max-width: 500px) {
+    .from {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .from__grupo {
+        position: sticky;
+    }
+
+    .from__input-error {
+        position: sticky;
+    }
+
+    /* .from__grupo-terminos, */
+    .from__mensaje,
+    .from__grupo-btn-enviar,
+    .from__grupo-email {
+        grid-column: 1;
+    }
+
+    .from__btn {
+        width: 100%;
+    }
+}
