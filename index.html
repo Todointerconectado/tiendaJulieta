@@ -18,15 +18,80 @@
     <!-- Bootstrap 5.3.0 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
-    <!-- style -->
+    <!-- style galeria productos, API -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- style from contacto -->
+    <link rel="stylesheet" href="./css/from_contacto.css">
 </head>
 <body class="body">
     <header class="header">
     </header>
     
     <main class="main container">
+
+        <!-- Se carga con JavaScrip desde una API -->
         <section id="container_cards" class="row row-cols-4 g-3">
+        </section>
+
+        <!-- From de contacto -->
+        <section id="container_from_contacto" class="container_from_contacto">
+            <h2 class="title_contacto">Formulario de Contacto</h2>
+            <form action="#" class="from" id="from_contacto">
+                <!-- Grupo: Nombre -->
+                <section class="from__grupo" id="grupo__name">
+                    <label for="name" class="from__label"><span>*</span> Nombre y Apellido</label>
+                    <div class="from__grupo-input">
+                        <input type="text" class="from__input" name="name" id="name" required placeholder="Ej: Francisco Carusso">
+                        <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="from__input-error">
+                        El nombre tiene que ser de 3 a 16 digitos y solo puede contener letras y espacios.
+                    </p>
+                </section>
+                
+                <!-- Grupo: teléfono -->
+                <section class="from__grupo" id="grupo__telefono">
+                    <label for="telefono" class="from__label"><span>*</span> Telefono</label>
+                    <div class="from__grupo-input">
+                        <input type="number" class="from__input" name="telefono" id="telefono" min="0" max="99999999999999" required placeholder="Ej:01112345678">
+                        <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="from__input-error">
+                        El teléfono solo puede contener números y el máximo son 14 digitos.
+                    </p>
+                </section>
+                
+                <!-- Grupo: email -->
+                <section class="from__grupo from__grupo-email" id="grupo__email">
+                    <label for="email" class="from__label"><span>*</span> Email</label>
+                    <div class="from__grupo-input">
+                        <input type="email" class="from__input" name="email" id="email" required placeholder="Ej: user@email.com">
+                        <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="from__input-error">
+                        El email solo puede contener letra, números, puntos, guiones y guion bajo.
+                    </p>
+                </section>
+
+                <!-- Mensaje de alerta -->
+                <article class="from__grupo from__mensaje" id="from__mensaje">
+                    <p>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <b>Error:</b> Por favor rellenar el formulario correctamente.
+                    </p>
+                </article>
+    
+                <!-- Grupo: Boton -->
+                <section class="from__grupo from__grupo-btn-enviar">
+                    <button type="submit" class="from__btn">
+                        Enviar
+                    </button>
+                    <p class="from_mensaje-exito" id="from_mensaje-exito">
+                        Formulario enviado exitosamente!
+                    </p>
+                </section>
+            </form>
         </section>
     </main>
     
@@ -35,7 +100,10 @@
     </footer>
 
     
-    <!-- Script js -->
+    <!-- Script para el API -->
     <script src="./js/index.js" type="module"></script>
+
+    <!-- script from contacto -->
+    <script src="./js/from_contacto.js" type="module"></script>
 </body>
 </html>

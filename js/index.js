@@ -37,7 +37,7 @@ fetch(API)
 
                 <div class="card-footer justify-content-center gap-1 d-flex">
                     <small class="text-muted">
-                        <button class="btn-azul">Más información</button>
+                        <a href="#container_from_contacto" class="btn-azul">Más información</a>
                     </small>
                 </div>
             </div>
