@@ -31,7 +31,7 @@
 .from {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 35px;
+    gap: 20px;
 }
 
 .from__grupo {
@@ -87,9 +87,8 @@ span,
 
 /* Mensaje de error */
 .from__input-error {
-    /* margin-top: .6rem; */
-    border: 3px solid transparent;
-    padding: 10px;
+    margin-top: 12px;
+    border: 2px solid transparent;
     width: 100%;
     max-width: 250px;
     font-size: 10px;
@@ -108,8 +107,22 @@ span,
 }
 
 /* Seccion email */
-.from__grupo-email {
+.from__grupo-email,
+.from__grupo-textArea {
     grid-column: span 2;
+}
+
+.from__input-textArea {
+    line-height: 17px;
+}
+
+.from__input-textArea::-webkit-scrollbar {
+    width: 4px;
+}
+
+.from__input-textArea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--color-blue);
 }
 
 /* Mensaje de error */
@@ -195,7 +208,7 @@ span,
 @media screen and (max-width: 500px) {
     .from {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 0px;
     }
 
     .from__grupo {
@@ -203,13 +216,15 @@ span,
     }
 
     .from__input-error {
+        margin-top: 0;
         position: sticky;
     }
 
     /* .from__grupo-terminos, */
     .from__mensaje,
     .from__grupo-btn-enviar,
-    .from__grupo-email {
+    .from__grupo-email,
+    .from__grupo-textArea {
         grid-column: 1;
     }
 
