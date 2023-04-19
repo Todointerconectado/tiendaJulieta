@@ -48,6 +48,7 @@ html {
     padding: 5px 10px;
     font-size: 18px;
     font-weight: 500;
+    text-decoration: none;
     background: var(--color-blue);
     color: var(--color-white);
     transition: 300ms ease background, 300ms ease color;
