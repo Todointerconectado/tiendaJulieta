@@ -30,6 +30,9 @@
     <!-- style from contacto -->
     <link rel="stylesheet" href="./css/from_contacto.css">
 
+    <!-- style cotización -->
+    <link rel="stylesheet" href="./css/cotizacion.css">
+
     <!-- footer -->
     <link rel="stylesheet" href="./css/footer.css">
 </head>
@@ -58,7 +61,7 @@
                             <a class="nav-link" href="#container_from_contacto">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-azul" href="#">Cotización</a>
+                            <a class="nav-link btn-azul" href="#cotizacion">Cotización</a>
                     </li>
                     </ul>
                 </div>
@@ -210,8 +213,27 @@
                 </form>
             </section>
         </div>
+
+        <!-- From cotización -->
+        <div  class="container">
+            <section id="cotizacion" class="conteiner_from_cotizacion">
+                <h2 class="cotizacion_title">Cotizaciones</h2>
+                <div class="container_input_cotizacion">
+                    <label for="categoria">Categoria:</label>
+                    <select name="categoria" id="categoria">
+                        <optgroup label="Tipos de productos">
+                            <option selected value="">Tipos de productos</option>
+                            <option value="women's clothing">Ropa de mujer</option>
+                            <option value="electronics">Electronica</option>
+                            <option value="jewelery">joyería</option>
+                            <option value="men's clothing">Ropa de hombre</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div id="cotizacion_resultado" class="cotizacion_resultado"></div>
+            </section>
+        </div>
     </main>
-    
     
     <footer class="footer">
         <section>
@@ -325,5 +347,8 @@
 
     <!-- script from contacto -->
     <script src="./js/from_contacto.js" type="module"></script>
+
+    <!-- script cotización -->
+    <script src="./js/cotizacion.js" type="module"></script>
 </body>
 </html>
