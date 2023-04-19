@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:wght@300;500;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+:root {
+    --color-white: rgb(255, 255, 255);
+    --color-blue: rgb(92, 103, 230);
+    --color-shadow-punto4: rgba(163, 163, 163, .4);
+}
+
+.quien_soy_text_y_img {
+    width: 100%;
+    max-width: 1330px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+/* Title y párrafos */
+.quien_soy_title_text {
+    width: 100%;
+    max-width: 500px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+.quien_soy_title_text::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: -55px;
+    position: absolute;
+    background-image: url("../assets/favicons/comillas.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quien_soy_title {
+    font-weight: bolder;
+    font-size: 48px;
+}
+
+/* img */
+.quien_soy_container_img {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.circle {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background: var(--color-blue);
+    opacity: 60%;
+}
+.quien_soy_container_img figure {
+    margin: 0;
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+.quien_soy_container_img figure img {
+    display: block;
+    width: 100%;
+}
+
+/* Barra de resultados */
+.content_barra {
+    padding-bottom: 65px;
+}
+
+.barra {
+    padding: 0 15px;
+    background: var(--color-blue);
+    width: 100%;
+}
+
+.content_barra .barra .container {
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--color-shadow-punto4);
+    padding: 20px 10px;
+    background: var(--color-white);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: relative;
+    bottom: -60px;
+}
+
+.container li {
+    padding: 3px;
+    min-width: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.container li i {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 30px;
+    background: var(--color-shadow-punto4);
+    color: var(--color-blue);
+}
+
+.container li .number {
+    color: var(--color-blue);
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container li .text {
+    color: gray;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@media screen and (max-width: 780px) {
+    .quien_soy_text_y_img {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
