@@ -66,6 +66,10 @@
     color: var(--color-blue);
 }
 
+.footer_logo .li_nav .footer_redes_sociales li:hover a {
+    color: rgb(67, 79, 209);
+}
+
 /* Enlaces Rapidos & Servicios */
 .footer_enlaces_rapidos .enlace_rapido a,
 .footer_servicios .enlace_rapido a {
@@ -79,6 +83,13 @@
     color: gray;
     font-size: 14px;
     padding-left: 10px;
+    text-decoration: none;
+}
+
+.footer_enlaces_rapidos .enlace_rapido a:hover,
+.footer_servicios .enlace_rapido a:hover,
+.footer_contacto li a:hover {
+    color: rgb(173, 173, 173);
 }
 
 .footer_contacto li div {
