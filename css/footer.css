@@ -10,9 +10,9 @@
 .footer {
     padding: 60px 0 0 0;
     background: var(--color-btn-background);
-    background-image: linear-gradient(rgb(0, 0, 0, .95), rgb(0, 0, 0, .9)), url("../assets/favicons/logo_julia.png");
+    background-image: linear-gradient(rgb(0, 0, 0, .9), rgb(0, 0, 0, .85)), url("../assets/favicons/logo_julia.png");
     background-repeat: no-repeat;
-    background-position: 130%;
+    background-position: 120%;
     background-size: contain;
     color: var(--color-input-white);
 }
@@ -131,6 +131,10 @@
 
 
 @media screen and (max-width: 768px) {
+    .footer {
+        background-position: center;
+    }
+
     .footer_enlaces_rapidos,
     .footer_servicios {
         display: none;
