@@ -60,7 +60,7 @@
         </nav>
     </header>
     
-    <main class="main container">
+    <main class="main">
         <!-- Sobre nosotros -->
         <section id="sobre_nosotros" class="sobre_nosotros">
             <section class="sobre_nosotros_title_text">
@@ -76,76 +76,77 @@
         </section>
 
         <!-- Se carga con JavaScrip desde una API -->
-        <section id="container_cards" class="row row-cols-4 g-3">
-        </section>
+        <div class="container">
+            <section id="container_cards" class="row row-cols-4 g-3">
+            </section>
+        </div>
 
         <!-- From de contacto -->
-        <section id="container_from_contacto" class="container_from_contacto">
-            <h2 class="title_contacto">Formulario de Contacto</h2>
-            <form action="#" class="from" id="from_contacto">
-                <!-- Grupo: Nombre -->
-                <section class="from__grupo" id="grupo__name">
-                    <label for="name" class="from__label"><span>*</span> Nombre y Apellido</label>
-                    <div class="from__grupo-input">
-                        <input type="text" class="from__input" name="name" id="name" required placeholder="Ej: Francisco Carusso">
-                        <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="from__input-error">
-                        El nombre tiene que ser de 3 a 16 digitos y solo puede contener letras y espacios.
-                    </p>
-                </section>
-                
-                <!-- Grupo: teléfono -->
-                <section class="from__grupo" id="grupo__telefono">
-                    <label for="telefono" class="from__label"><span>*</span> Telefono</label>
-                    <div class="from__grupo-input">
-                        <input type="number" class="from__input" name="telefono" id="telefono" min="0" max="99999999999999" required placeholder="Ej:01112345678">
-                        <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="from__input-error">
-                        El teléfono solo puede contener números, entre 7 a 14 digitos.
-                    </p>
-                </section>
-                
-                <!-- Grupo: email -->
-                <section class="from__grupo from__grupo-email" id="grupo__email">
-                    <label for="email" class="from__label"><span>*</span> Email</label>
-                    <div class="from__grupo-input">
-                        <input type="email" class="from__input" name="email" id="email" required placeholder="Ej: user@email.com">
-                        <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
-                    </div>
-                    <p class="from__input-error">
-                        El email solo puede contener letra, números, puntos, guiones y guion bajo.
-                    </p>
-                </section>
-
-                <!-- Mensaje del usuario -->
-                <section class="from__grupo from__grupo-textArea" id="grupo__name">
-                    <label for="textArea" class="from__label">Deja tu mensaje</label>
-                    <div class="from__grupo-input">
-                        <textarea class="from__input from__input-textArea" name="textArea" id="textArea" placeholder="mensaje..."></textarea>
-                    </div>
-                </section>
-
-                <!-- Mensaje de alerta -->
-                <article class="from__grupo from__mensaje" id="from__mensaje">
-                    <p>
-                        <i class="fa-solid fa-triangle-exclamation"></i>
-                        <b>Error:</b> Por favor rellenar el formulario correctamente.
-                    </p>
-                </article>
-    
-                <!-- Grupo: Boton -->
-                <section class="from__grupo from__grupo-btn-enviar">
-                    <button type="submit" class="from__btn">
-                        Enviar
-                    </button>
-                    <p class="from_mensaje-exito" id="from_mensaje-exito">
-                        Formulario enviado exitosamente!
-                    </p>
-                </section>
-            </form>
-        </section>
+        <div class="container">
+            <section id="container_from_contacto" class="container_from_contacto">
+                <h2 class="title_contacto">Formulario de Contacto</h2>
+                <form action="#" class="from" id="from_contacto">
+                    <!-- Grupo: Nombre -->
+                    <section class="from__grupo" id="grupo__name">
+                        <label for="name" class="from__label"><span>*</span> Nombre y Apellido</label>
+                        <div class="from__grupo-input">
+                            <input type="text" class="from__input" name="name" id="name" required placeholder="Ej: Francisco Carusso">
+                            <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <p class="from__input-error">
+                            El nombre tiene que ser de 3 a 16 digitos y solo puede contener letras y espacios.
+                        </p>
+                    </section>
+            
+                    <!-- Grupo: teléfono -->
+                    <section class="from__grupo" id="grupo__telefono">
+                        <label for="telefono" class="from__label"><span>*</span> Telefono</label>
+                        <div class="from__grupo-input">
+                            <input type="number" class="from__input" name="telefono" id="telefono" min="0" max="99999999999999" required placeholder="Ej:01112345678">
+                            <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <p class="from__input-error">
+                            El teléfono solo puede contener números, entre 7 a 14 digitos.
+                        </p>
+                    </section>
+            
+                    <!-- Grupo: email -->
+                    <section class="from__grupo from__grupo-email" id="grupo__email">
+                        <label for="email" class="from__label"><span>*</span> Email</label>
+                        <div class="from__grupo-input">
+                            <input type="email" class="from__input" name="email" id="email" required placeholder="Ej: user@email.com">
+                            <i class="from__validation-estado fa-sharp fa-solid fa-circle-xmark"></i>
+                        </div>
+                        <p class="from__input-error">
+                            El email solo puede contener letra, números, puntos, guiones y guion bajo.
+                        </p>
+                    </section>
+                    <!-- Mensaje del usuario -->
+                    <section class="from__grupo from__grupo-textArea" id="grupo__name">
+                        <label for="textArea" class="from__label">Deja tu mensaje</label>
+                        <div class="from__grupo-input">
+                            <textarea class="from__input from__input-textArea" name="textArea" id="textArea" placeholder="mensaje..."></textarea>
+                        </div>
+                    </section>
+                    <!-- Mensaje de alerta -->
+                    <article class="from__grupo from__mensaje" id="from__mensaje">
+                        <p>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <b>Error:</b> Por favor rellenar el formulario correctamente.
+                        </p>
+                    </article>
+                    <!-- Grupo: Boton -->
+                    <section class="from__grupo from__grupo-btn-enviar">
+                        <button type="submit" class="from__btn">
+                            Enviar
+                        </button>
+                        <p class="from_mensaje-exito" id="from_mensaje-exito">
+                            Formulario enviado exitosamente!
+                        </p>
+                    </section>
+                </form>
+            </section>
+        </div>
     </main>
     
     
