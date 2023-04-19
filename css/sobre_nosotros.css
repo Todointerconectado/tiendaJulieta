@@ -42,6 +42,7 @@
     font-weight: 500;
     background: var(--color-blue);
     color: var(--color-white);
+    text-decoration: none;
     transition: 300ms ease background, 300ms ease color;
 }
 .sobre_nosotros_btn:hover {
