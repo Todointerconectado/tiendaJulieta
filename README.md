@@ -1,6 +1,6 @@
 # <h1 align="center">Trabajo Práctico Integrador</h1>
 
-|   Insignias   |
+|  Insignias ✔  |
 | :-----------: |
 | [![GitHub pull requests](https://img.shields.io/github/issues-pr/Todointerconectado/tiendaJulieta?color=blue&logo=github)](https://github.com/Todointerconectado/tiendaJulieta/pulls) [![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Todointerconectado/tiendaJulieta?color=blue&logo=github)](https://github.com/Todointerconectado/tiendaJulieta/pulls)
 [![GitHub forks](https://img.shields.io/github/forks/Todointerconectado/tiendaJulieta?logo=github)](https://github.com/Todointerconectado/tiendaJulieta/fork) [![GitHub NE Network](https://img.shields.io/badge/NE-Network-blue?logo=github)](https://github.com/Todointerconectado/tiendaJulieta/network)
